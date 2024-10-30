@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    position: relative; /* Adicionando posição relativa para a imagem */
+    height: 400px; /* Altura fixa para o cabeçalho */
+    overflow: hidden; /* Garante que nada exceda a área do cabeçalho */
+}
+
+.header-image {
+    width: 100%;
+    height: 60%;
+}
+
+.couple-photo {
+    width: 100%;
+    height: 100%; /* Faz com que a imagem preencha toda a altura do cabeçalho */
+    object-fit: cover; /* Faz com que a imagem se ajuste mantendo a proporção */
+    display: block;
+}
+
+.header-content {
+    background: rgba(155, 0, 0, 0.8); /* Cor de fundo com transparência */
+    padding: 20px 300px;
+    border-radius: 10px;
+    position: absolute; /* Colocando o conteúdo em cima da imagem */
+    top: 60%; /* Centralizando verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+section {
+    padding: 40px 0;
+    border-top: 1px solid #333;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #ff2e2e;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.history-photo {
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #ff2e2e;
+}
+
+#pedido {
+    background: linear-gradient(135deg, #9b0000, #ff2e2e);
+    padding: 50px 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mensagem-intro {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffd1d1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.reveal-button {
+    padding: 15px 30px;
+    font-size: 1.3em;
+    color: white;
+    background-color: #ff2e2e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reveal-button:hover {
+    background-color: #e61c1c;
+    transform: scale(1.05);
+}
+
+.pedido-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeInZoom 1s ease forwards;
+}
+
+.pedido-final h3 {
+    font-size: 2.5em;
+    color: #ffd1d1;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.mensagem-pedido {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #ffb3b3;
+}
+
+.final-button {
+    padding: 12px 24px;
+    font-size: 1.3em;
+    background-color: #ff2e2e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.final-button:hover {
+    background-color: #e61c1c;
+    transform: scale(1.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInZoom {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .header-content {
+        padding: 20px 10px; /* Reduzindo o padding para telas menores */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Reduzindo o tamanho da fonte do título */
+    }
+
+    nav a {
+        font-size: 1em; /* Reduzindo o tamanho da fonte dos links */
+        margin: 0 10px; /* Reduzindo o espaço entre os links */
+    }
+
+    section h2 {
+        font-size: 1.5em; /* Reduzindo o tamanho da fonte dos cabeçalhos das seções */
+    }
+
+    section p {
+        font-size: 1em; /* Reduzindo o tamanho da fonte dos parágrafos */
+    }
+
+    .history-photo {
+        max-width: 100%; /* Assegurando que as fotos se ajustem na tela */
+    }
+
+    .pedido-final h3 {
+        font-size: 2em; /* Reduzindo o tamanho da fonte da pergunta */
+    }
+
+    .mensagem-pedido {
+        font-size: 1.2em; /* Reduzindo o tamanho da fonte da mensagem de pedido */
+    }
+
+    .reveal-button, .final-button {
+        font-size: 1em; /* Reduzindo o tamanho da fonte dos botões */
+        padding: 10px 20px; /* Reduzindo o padding dos botões */
+    }
+}
